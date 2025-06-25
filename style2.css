@@ -1,0 +1,185 @@
+.team-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .team-member {
+    text-align: center;
+    padding: 20px;
+    border-radius: 15px;
+  }
+
+  .team-member img {
+    width: 100%;
+    max-width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 15px;
+  }
+
+  .team-member h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+  }
+
+  .team-member p {
+    font-size: 14px;
+    color: #666;
+    margin-top: 5px;
+  }
+a img{
+  margin: 30px;
+  width: 100px;
+}
+:root {
+  --primary-color: rgb(9, 128, 11);
+  --text-muted: rgb(119, 119, 119);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Header, Navbar */
+header,
+nav,
+ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+ul {
+  gap: 3vw;
+}
+
+ul li a {
+  transition: 0.2s;
+  color: var(--text-muted);
+  text-decoration: none;
+}
+
+ul li a:hover {
+  font-size: 20px;
+  color: black;
+  transition: 0.2s;
+}
+
+nav {
+  gap: 5vw;
+}
+
+header {
+  justify-content: space-between;
+  padding: 3vh 10vw;
+  margin-bottom: 5vh;
+}
+
+
+/* Logo */
+.logo img {
+  width: 150px;
+}
+
+/* Registration Button */
+.registration-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1vw;
+}
+
+#reg-btn1 {
+  padding: 1vh 2vw;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 0.3vh solid var(--primary-color);
+}
+
+.registration-btn a {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-decoration: none;
+  background-color: white;
+  transition: 0.3s;
+  color: black;
+}
+
+.registration-btn a:hover {
+  color: white;
+  background-color: var(--primary-color);
+  transition: 0.3s;
+}
+
+/* Burger */
+.burger {
+  color: black;
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.burger ion-icon {
+  font-size: 50px;
+}
+
+.burger span {
+  background-color: black;
+  display: block;
+  border-radius: 2px;
+}
+
+/* Адаптив под мобилку */
+@media (max-width: 1060px) {
+  .burger {
+    display: flex;
+    width: 100px;
+  }
+
+  .burger ion-icon.active {
+    transform: rotate(45deg);
+    transition: 0.5s;
+  }
+
+  nav {
+    
+    display: none;
+    flex-direction: column;
+    align-items: start;
+    gap: 10px;
+    background-color: white;
+    position: absolute;
+    top: 150px;
+    right: 0;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  nav.active {
+    display: flex;
+  }
+
+  nav ul {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  nav .registration-btn {
+    width: 100%;
+  }
+}
+
+  @media (max-width: 480px) {
+    .team-member img {
+      height: 180px;
+    }
+  }
